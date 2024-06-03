@@ -76,23 +76,23 @@ pokemon.forEach((pokemon) => {
 
 // Exercise 10:
 
-const catchPokemon = (pokemonObj) => {
+game.catchPokemon = (pokemonObj) => {
   game.party.push(pokemonObj);
 };
 
-catchPokemon(pokemon[14]);
-console.log(game.party);
+game.catchPokemon(pokemon[14]);
+console.log("Exercise 10: game party", game.party);
 
 // Exercise 11:
 
-const catchPokemonAndDecrement = (pokemonObj) => {
+game.catchPokemonAndDecrement = (pokemonObj) => {
   game.party.push(pokemonObj);
   let pokeballs = game.items.find((item) => item.name === "pokeball");
   pokeballs.quantity -= 1;
 };
 
-catchPokemonAndDecrement(pokemon[18]);
-console.log(game.items);
+game.catchPokemonAndDecrement(pokemon[18]);
+console.log("Exercise 11: game items", game.items);
 
 // Exercise 12:
 
@@ -102,7 +102,7 @@ game.gyms.forEach((gym) => {
   }
 });
 
-console.log(game.gyms);
+console.log("Exercise 12:", game.gyms);
 
 // Exercise 13:
 
@@ -111,7 +111,7 @@ let gymTally = {
   incompleted: 0,
 };
 
-const gymStatus = () => {
+game.gymStatus = () => {
   game.gyms.forEach((gym) => {
     if (gym.completed === true) {
       gymTally.completed += 1;
@@ -121,16 +121,16 @@ const gymStatus = () => {
   });
 };
 
-gymStatus();
-console.log("gym tally", gymTally);
+game.gymStatus();
+console.log("Exercise 13: gym tally", gymTally);
 
 // Exercise 14:
 
-const partyCount = () => {
+game.partyCount = () => {
   return game.party.length;
 };
 
-console.log(partyCount());
+console.log("Exercise 14:", game.partyCount());
 
 // Exercise 15:
 
@@ -140,8 +140,8 @@ game.gyms.forEach((gym) => {
   }
 });
 
-console.log(game.gyms);
+console.log("Exercise 15:", game.gyms);
 
 // Exercise 16:
 
-console.log(game);
+console.log("Exercise 16:", game);
